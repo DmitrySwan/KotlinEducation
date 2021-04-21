@@ -32,7 +32,7 @@ fun countLetters(input: String): String {
 fun groupWords(words: Array<String>): List<List<String>> {
     val map: MutableMap<String, MutableList<String>> = HashMap()
     for (word in words) {
-        val sum: String = word.chars().sorted().toArray().joinToString()
+        val sum: String = word.toCharArray().sorted().joinToString()
         map.getOrPut(sum) { mutableListOf() }
             .add(word)
     }
